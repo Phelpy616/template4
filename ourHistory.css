@@ -1,0 +1,175 @@
+body {
+  height: auto;
+  margin: 0;
+  background-color: #091e34;
+}
+
+/*header*/
+.header {
+  width: 100%;
+  height: 100px;
+}
+
+.header div:nth-child(1) {
+  width: 100%;
+  height: 50%;
+  background-color: greenyellow;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header div:nth-child(1) h3 {
+  margin: 0;
+  color: black;
+}
+
+.header div:nth-child(2) {
+  width: 100%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.833);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.header div:nth-child(2) img {
+  width: 60px;
+  cursor: pointer;
+}
+
+.header div:nth-child(2) h3 {
+  margin: 0;
+  color: greenyellow;
+  cursor: pointer;
+}
+
+/*Our history cantainer*/
+.ourHistory {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 100px;
+}
+
+.ourHistory div {
+  width: 40%;
+  height: auto;
+}
+
+.ourHistory div h1,
+p {
+  margin: 0;
+  color: #adff2f;
+}
+
+.ourHistory div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.ourHistory div:nth-child(1) h1 {
+  font-size: 100px;
+}
+
+.ourHistory div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+/*slider*/
+.slider {
+  overflow: hidden; /* Hide overflow to create slider effect */
+  white-space: nowrap; /* Prevent wrapping */
+  position: relative;
+  border-top: 2px solid #adff2f;
+  border-bottom: 2px solid #adff2f;
+  margin-top: 70px;
+}
+
+.slider-track {
+  display: flex; /* Flex container for smooth sliding */
+  width: calc(200%); /* Double the width for seamless looping */
+  animation: slide 30s linear infinite; /* Continuous sliding animation */
+}
+
+.slider div {
+  flex-shrink: 0; /* Prevent shrinking */
+  padding: 0 20px; /* Space between items */
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0); /* Start from the first div */
+  }
+  to {
+    transform: translateX(-50%); /* Move only halfway to create a loop */
+  }
+}
+
+h3 {
+  font-size: 24px; /* Adjust text size */
+  color: #adff2f; /* Text color */
+  padding: 10px 20px; /* Add padding */
+  margin: 0;
+}
+
+@media (max-width: 450px) {
+  .header div:nth-child(1) h3 {
+    font-size: 30px;
+    padding: 0;
+  }
+
+  .header div:nth-child(2) h3 {
+    font-size: 10px;
+    padding: 0;
+  }
+
+  .ourHistory {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px;
+    gap: 50px;
+    margin-top: 500px;
+  }
+
+  .ourHistory div {
+    width: 100%;
+  }
+
+  .ourHistory div:nth-child(1) {
+    display: flex;
+    align-items: center;
+  }
+
+  .ourHistory div:nth-child(1) h1 {
+    font-size: 70px;
+  }
+
+  .ourHistory div:nth-child(2) {
+    text-align: justify;
+  }
+
+  .slider {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .final {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .final p {
+    width: 90%;
+  }
+}

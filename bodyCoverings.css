@@ -1,0 +1,248 @@
+body {
+  height: auto;
+  margin: 0;
+  background-color: #091e34;
+}
+
+/*header*/
+.header {
+  width: 100%;
+  height: 100px;
+}
+
+.header div:nth-child(1) {
+  width: 100%;
+  height: 50%;
+  background-color: greenyellow;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header div:nth-child(1) h3 {
+  margin: 0;
+  color: black;
+}
+
+.header div:nth-child(2) {
+  width: 100%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.833);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.header div:nth-child(2) img {
+  width: 60px;
+  cursor: pointer;
+}
+
+.header div:nth-child(2) h3 {
+  margin: 0;
+  color: greenyellow;
+  cursor: pointer;
+}
+
+/*body coverings text at the top*/
+.coveringsText {
+  color: #adff2f;
+  display: flex;
+  flex-direction: row;
+  gap: 200px;
+  box-sizing: border-box;
+  padding: 60px;
+  margin-top: 390px;
+}
+
+.coveringsText h1 {
+  font-size: 6rem;
+  margin: 0;
+}
+
+.coveringsText div:last-child {
+  width: 40%;
+  align-self: flex-end;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/*line*/
+.line {
+  width: 100%;
+  height: 2px;
+  margin-top: 10px;
+  background-color: #adff2f;
+}
+
+/*coverings text before the products*/
+.coverTxt {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.coverTxt h3 {
+  color: #adff2f;
+  margin: 0;
+}
+
+/*smaller and thinier line*/
+.smallerLine {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.smallerLine div {
+  background-color: #acff2f43;
+  height: 1px;
+  width: 80%;
+}
+
+/*products*/
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  grid-template-rows: repeat(3, 1fr); /* 3 equal rows */
+  gap: 40px;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+}
+
+.product-item {
+  background-color: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.product-item h4,
+p {
+  margin: 0;
+  color: #adff2f;
+}
+
+.product-item img {
+  width: 300px;
+}
+
+.product-item .plain2 {
+  width: 180px;
+}
+/*slider*/
+.slider {
+  overflow: hidden; /* Hide overflow to create slider effect */
+  white-space: nowrap; /* Prevent wrapping */
+  position: relative;
+  border-top: 2px solid #adff2f;
+  border-bottom: 2px solid #adff2f;
+  margin-top: 70px;
+}
+
+.slider-track {
+  display: flex; /* Flex container for smooth sliding */
+  width: calc(200%); /* Double the width for seamless looping */
+  animation: slide 30s linear infinite; /* Continuous sliding animation */
+}
+
+.slider div {
+  flex-shrink: 0; /* Prevent shrinking */
+  padding: 0 20px; /* Space between items */
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0); /* Start from the first div */
+  }
+  to {
+    transform: translateX(-50%); /* Move only halfway to create a loop */
+  }
+}
+
+h3 {
+  font-size: 24px; /* Adjust text size */
+  color: #adff2f; /* Text color */
+  padding: 10px 20px; /* Add padding */
+  margin: 0;
+}
+
+/*final*/
+.final {
+  width: 100%;
+  color: #adff2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.final p {
+  width: 30%;
+  text-align: center;
+}
+
+@media (max-width: 450px) {
+  .header div:nth-child(1) h3 {
+    font-size: 30px;
+    padding: 0;
+  }
+
+  .header div:nth-child(2) h3 {
+    font-size: 10px;
+    padding: 0;
+  }
+
+  .coveringsText {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    width: 100%;
+    align-items: center;
+    margin-top: 470px;
+  }
+
+  .coveringsText h1 {
+    font-size: 3em;
+    margin: 0;
+  }
+
+  .coveringsText div:last-child {
+    width: 70%;
+    align-self: center;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .products {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0;
+    gap: 110px;
+  }
+
+  .final {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .final p {
+    width: 90%;
+  }
+}

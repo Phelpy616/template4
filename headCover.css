@@ -1,0 +1,193 @@
+body {
+  height: 120vh;
+  margin: 0;
+  background-color: #091e34;
+}
+
+/*header*/
+.header {
+  width: 100%;
+  height: 100px;
+}
+
+.header div:nth-child(1) {
+  width: 100%;
+  height: 50%;
+  background-color: greenyellow;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header div:nth-child(1) h3 {
+  margin: 0;
+  color: black;
+}
+
+.header div:nth-child(2) {
+  width: 100%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.833);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.header div:nth-child(2) img {
+  width: 60px;
+  cursor: pointer;
+}
+
+.header div:nth-child(2) h3 {
+  margin: 0;
+  color: greenyellow;
+  cursor: pointer;
+}
+
+/*thich cover container*/
+.thicCover {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+  margin-bottom: 300px;
+  gap: 170px;
+}
+
+.thicCover div:nth-child(1) img {
+  width: 250px;
+}
+
+.thicCover div:nth-child(2) {
+  width: 30%;
+  color: #adff2f;
+}
+
+.thicCover div:nth-child(2) div {
+  width: 200px;
+  border: 2px solid #adff2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 1rem;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.thicCover div:nth-child(2) div:hover {
+  color: #091e34;
+  background-color: #adff2f;
+}
+
+.thicCover div:nth-child(2) h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.thicCover div:nth-child(2) div h4 {
+  margin: 0;
+}
+
+/*slider*/
+.slider {
+  overflow: hidden; /* Hide overflow to create slider effect */
+  white-space: nowrap; /* Prevent wrapping */
+  position: relative;
+  border-top: 2px solid #adff2f;
+  border-bottom: 2px solid #adff2f;
+  margin-top: 70px;
+}
+
+.slider-track {
+  display: flex; /* Flex container for smooth sliding */
+  width: calc(200%); /* Double the width for seamless looping */
+  animation: slide 30s linear infinite; /* Continuous sliding animation */
+}
+
+.slider div {
+  flex-shrink: 0; /* Prevent shrinking */
+  padding: 0 20px; /* Space between items */
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0); /* Start from the first div */
+  }
+  to {
+    transform: translateX(-50%); /* Move only halfway to create a loop */
+  }
+}
+
+h3 {
+  font-size: 24px; /* Adjust text size */
+  color: #adff2f; /* Text color */
+  padding: 10px 20px; /* Add padding */
+  margin: 0;
+}
+
+/*final*/
+.final {
+  width: 100%;
+  color: #adff2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.final p {
+  width: 30%;
+  text-align: center;
+}
+
+@media (max-width: 450px) {
+  body {
+    height: auto;
+  }
+
+  .header div:nth-child(1) h3 {
+    font-size: 30px;
+    padding: 0;
+  }
+
+  .header div:nth-child(2) h3 {
+    font-size: 10px;
+    padding: 0;
+  }
+
+  .thicCover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    gap: 40px;
+  }
+
+  .thicCover div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .thicCover div:nth-child(1) img {
+    width: 80%;
+  }
+
+  .thicCover div:nth-child(2) {
+    width: 90%;
+  }
+
+  .final {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .final p {
+    width: 90%;
+  }
+}

@@ -1,0 +1,266 @@
+body {
+  height: auto;
+  margin: 0;
+  background-color: black;
+}
+
+/*header*/
+.header {
+  width: 100%;
+  height: 100px;
+}
+
+.header div:nth-child(1) {
+  width: 100%;
+  height: 50%;
+  background-color: greenyellow;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header div:nth-child(1) h3 {
+  margin: 0;
+  color: black;
+}
+
+.header div:nth-child(2) {
+  width: 100%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.833);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.header div:nth-child(2) img {
+  width: 60px;
+  cursor: pointer;
+}
+
+.header div:nth-child(2) h3 {
+  margin: 0;
+  color: greenyellow;
+  cursor: pointer;
+}
+
+/*Text and image at the top*/
+.txtNImgTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-container h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: greenyellow;
+  font-size: 6rem;
+  text-align: center;
+  z-index: 2;
+  margin: 0;
+}
+
+.image-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.708); /* Adjust transparency here */
+  z-index: 1;
+}
+
+/*line*/
+.line {
+  width: 100%;
+  background-color: greenyellow;
+  height: 2px;
+}
+
+/*earth and text*/
+.earthNTxt {
+  width: 50%;
+  color: greenyellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 100px;
+}
+
+.earthNTxt img {
+  width: 200px;
+}
+
+/*faqs*/
+.faqs {
+  width: 50%;
+  color: greenyellow;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*faqs questions*/
+.faqsQuestions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  color: #adff2f;
+  margin-top: 70px;
+}
+
+.faqsQuestions > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between the questions */
+}
+
+.faqsQuestions h4 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.faqsQuestions div:nth-child(1) div img {
+  width: 30px;
+}
+
+.faqsQuestions div:nth-child(2) div img {
+  width: 30px;
+}
+
+/*slider*/
+.slider {
+  overflow: hidden; /* Hide overflow to create slider effect */
+  white-space: nowrap; /* Prevent wrapping */
+  position: relative;
+  border-top: 2px solid #adff2f;
+  border-bottom: 2px solid #adff2f;
+  margin-top: 70px;
+}
+
+.slider-track {
+  display: flex; /* Flex container for smooth sliding */
+  width: calc(200%); /* Double the width for seamless looping */
+  animation: slide 30s linear infinite; /* Continuous sliding animation */
+}
+
+.slider div {
+  flex-shrink: 0; /* Prevent shrinking */
+  padding: 0 20px; /* Space between items */
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0); /* Start from the first div */
+  }
+  to {
+    transform: translateX(-50%); /* Move only halfway to create a loop */
+  }
+}
+
+h3 {
+  font-size: 24px; /* Adjust text size */
+  color: #adff2f; /* Text color */
+  padding: 10px 20px; /* Add padding */
+  margin: 0;
+}
+
+/*final*/
+.final {
+  width: 100%;
+  color: #adff2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.final p {
+  width: 30%;
+  text-align: center;
+}
+
+@media (max-width: 450px) {
+  .header div:nth-child(1) h3 {
+    font-size: 30px;
+  }
+
+  .header div:nth-child(2) h3 {
+    font-size: 10px;
+  }
+
+  .txtNImgTop {
+    width: 100%;
+    height: auto;
+    margin-top: 350px;
+    margin-bottom: 50px;
+  }
+
+  .txtNImgTop h1 {
+    color: #adff2f;
+    font-size: 6rem;
+    margin: 0;
+    text-align: center;
+  }
+
+  .earthNTxt {
+    width: 90%;
+    margin-top: 50px;
+  }
+
+  .faqs {
+    width: 90%;
+    margin-top: 50px;
+  }
+
+  .faqs h1,
+  p {
+    margin: 0;
+  }
+
+  .faqsQuestions {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slider div {
+    padding: 0;
+  }
+
+  .final {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  .final p {
+    width: 90%;
+  }
+}
