@@ -1,3 +1,7 @@
+* {
+  font-family: "Orbitron";
+}
+
 body {
   height: auto;
   margin: 0;
@@ -201,9 +205,44 @@ h3 {
     padding: 0;
   }
 
+  .header div:nth-child(2) {
+    justify-content: space-between;
+  }
+
+  .header div:nth-child(2) img:nth-child(1) {
+    margin-left: 10px;
+  }
+
+  .header div:nth-child(2) img:nth-child(2) {
+    margin-right: 5px;
+    width: 50px;
+  }
+
   .header div:nth-child(2) h3 {
     font-size: 10px;
     padding: 0;
+  }
+
+  /*menu dropdowm*/
+  .menu {
+    width: 100%;
+    height: 25vh;
+    background-color: #adff2f;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu div h1 {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  /* Class to show the menu */
+  .menu.active {
+    display: flex;
   }
 
   .coveringsText {
@@ -213,19 +252,28 @@ h3 {
     padding: 0;
     width: 100%;
     align-items: center;
-    margin-top: 470px;
+    margin-top: 250px;
+    margin-bottom: 300px;
   }
 
   .coveringsText h1 {
-    font-size: 3em;
+    font-size: 4.3em;
     margin: 0;
   }
 
   .coveringsText div:last-child {
-    width: 70%;
+    width: 90%;
     align-self: center;
     text-align: left;
     margin-bottom: 20px;
+  }
+
+  .coveringsText div:last-child p {
+    text-align: left;
+  }
+
+  .coverTxt {
+    margin-top: 10px;
   }
 
   .products {
@@ -234,6 +282,10 @@ h3 {
     box-sizing: border-box;
     padding: 0;
     gap: 110px;
+  }
+
+  .slider {
+    margin-top: 0;
   }
 
   .final {
