@@ -140,6 +140,10 @@ h3 {
 }
 
 @media (max-width: 450px) {
+  html {
+    background-color: black;
+  }
+
   body {
     height: auto;
   }
@@ -176,7 +180,7 @@ h3 {
   .final {
     width: 100%;
     margin-top: 50px;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
   }
 
   .final p {

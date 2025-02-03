@@ -143,6 +143,7 @@ h3 {
 
   .ourHistory div {
     width: 100%;
+    align-items: center;
   }
 
   .ourHistory div:nth-child(1) {
@@ -155,7 +156,13 @@ h3 {
   }
 
   .ourHistory div:nth-child(2) {
-    text-align: justify;
+    text-align: center;
+  }
+
+  .ourHistory div:nth-child(2) p {
+    text-align: center;
+    width: 90%;
+    hyphens: auto;
   }
 
   .slider {
