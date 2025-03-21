@@ -14,6 +14,14 @@ body {
   height: 100px;
 }
 
+.headerMobile{
+  display: none;
+}
+
+.menu{
+  display: none;
+}
+
 .header div:nth-child(1) {
   width: 100%;
   height: 50%;
@@ -37,11 +45,17 @@ body {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  position: relative;
 }
 
 .header div:nth-child(2) img {
   width: 60px;
   cursor: pointer;
+}
+
+.header div:nth-child(2) .logo{
+  position: absolute;
+  left: 20px;
 }
 
 .header div:nth-child(2) h3 {
@@ -126,27 +140,43 @@ h3 {
 }
 
 @media (max-width: 450px) {
-  .header div:nth-child(1) h3 {
+  .header{
+    display: none;
+  }
+
+  .headerMobile{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .headerMobile div:nth-child(1){
+    width: 100%;
+    background-color: #cfff7e;
+  }
+
+  .headerMobile div:nth-child(1) h3 {
     font-size: 30px;
-    padding: 0;
+    color: black;
   }
 
-  .header div:nth-child(2) {
+  .headerMobile div:nth-child(2) {
+    display: flex;
     justify-content: space-between;
+    height: auto;
+    align-items: center;
   }
 
-  .header div:nth-child(2) img:nth-child(1) {
+  .headerMobile div:nth-child(2) .logo {
+    width: 40px;
+    height: 25px;
     margin-left: 10px;
+    color: #cfff7e;
   }
 
-  .header div:nth-child(2) img:nth-child(2) {
-    margin-right: 5px;
+  .headerMobile div:nth-child(2) .menuBtn {
     width: 50px;
-  }
-
-  .header div:nth-child(2) h3 {
-    font-size: 10px;
-    padding: 0;
+    height: auto;
+    margin-right: 5px;
   }
 
   /*menu dropdowm*/

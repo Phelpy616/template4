@@ -1,10 +1,13 @@
-const goToPages = document.querySelectorAll(".header div:nth-child(2) h3");
-goToPages.forEach((element) => {
+if(window.innerWidth > 450){
+  const goToPages = document.querySelectorAll(".header div:nth-child(2) h3");
+  goToPages.forEach((element) => {
   element.addEventListener("click", function () {
     window.location.href = element.dataset.url;
   });
 });
+}
 
+//Clicking "continue shopping" button will take to body covers page
 try {
   const continueShoppigBtn = document.querySelector(".emptyCart div");
   continueShoppigBtn.addEventListener("click", () => {
@@ -14,6 +17,7 @@ try {
   console.log(error);
 }
 
+//Go to respective product page like, thick cover, light cover, etc
 const goToCoversPages = document.querySelectorAll(".products div");
 goToCoversPages.forEach((element) =>
   element.addEventListener(
@@ -25,31 +29,31 @@ goToCoversPages.forEach((element) =>
 const logo = document.querySelector(".logo");
 logo.addEventListener("click", () => (window.location.href = logo.dataset.url));
 
-/*Display menu in mobile */
-const menuContainer = document.querySelector(".menuContainer");
-if (window.innerWidth <= 450) {
-  const html2 = `
-  <div class="menu">
-       <div data-url="bodyCoverings.html"><h1>BODY COVERS</h1></div>
-       <div data-url="ourHistory.html"><h1>OUR HISTORY</h1></div>
-       <div data-url="cart.html"><h1>CART</h1></div>
-  </div>`;
-  menuContainer.insertAdjacentHTML("afterbegin", html2);
+/*display the menu on mobile*/
+if(window.innerWidth < 450){
+  const menuBtn = document.querySelector(
+    ".headerMobile div:nth-child(2) .menuBtn"
+  );
+
+  const menu = document.querySelector(".menu");
+
+  menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("active"); // Toggle 'active' class
+  });
 }
 
-/*display the menu */
-const menuBtn = document.querySelector(
-  ".header div:nth-child(2) img:nth-child(2)"
-);
-const menu = document.querySelector(".menu");
-menuBtn.addEventListener("click", () => {
-  menu.classList.toggle("active"); // Toggle 'active' class
-});
-
 /*go to the respective page when one of .menu divs is clicked */
-const menuDivs = document.querySelectorAll(".menu div");
-menuDivs.forEach((div) => {
+if(window.innerWidth < 450){
+  const menuDivs = document.querySelectorAll(".menu div");
+  menuDivs.forEach((div) => {
   div.addEventListener("click", () => {
     window.location.href = div.dataset.url;
   });
 });
+}
+
+//go to home page by cliking the logo on mobile
+const logoMobile = document.querySelector('.headerMobile .logo');
+logoMobile.addEventListener('click',()=>{
+  window.location.href = 'index.html'
+})

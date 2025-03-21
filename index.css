@@ -14,6 +14,14 @@ body {
   height: 100px;
 }
 
+.headerMobile{
+  display: none;
+}
+
+.menu{
+  display: none;
+}
+
 .header div:nth-child(1) {
   width: 100%;
   height: 50%;
@@ -37,11 +45,17 @@ body {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  position: relative;
 }
 
 .header div:nth-child(2) img {
   width: 60px;
   cursor: pointer;
+}
+
+.header div:nth-child(2) .logo{
+  position: absolute;
+  left: 20px;
 }
 
 .header div:nth-child(2) h3 {
@@ -51,44 +65,16 @@ body {
 }
 
 /*Text and image at the top*/
-.txtNImgTop {
+.txtTop {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.image-container {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-}
-
-.image-container img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.image-container h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #cfff7e;
-  font-size: 6rem;
-  text-align: center;
-  z-index: 2;
-  margin: 0;
-}
-
-.image-container .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.708); /* Adjust transparency here */
-  z-index: 1;
+.txtTop h1{
+font-size: 9rem;
+color: #cfff7e;
+text-align: center;
 }
 
 /*line*/
@@ -212,20 +198,40 @@ h3 {
 }
 
 @media (max-width: 450px) {
-  .header div:nth-child(1) h3 {
+  .header{
+    display: none;
+  }
+
+  .headerMobile{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .headerMobile div:nth-child(1){
+    width: 100%;
+    background-color: #cfff7e;
+  }
+
+  .headerMobile div:nth-child(1) h3 {
     font-size: 30px;
+    color: black;
   }
 
-  .header div:nth-child(2) {
+  .headerMobile div:nth-child(2) {
+    display: flex;
     justify-content: space-between;
+    height: auto;
+    align-items: center;
   }
 
-  .header div:nth-child(2) img:nth-child(1) {
+  .headerMobile div:nth-child(2) .logo {
+    width: 40px;
+    height: 25px;
     margin-left: 10px;
     color: #cfff7e;
   }
 
-  .header div:nth-child(2) img:nth-child(2) {
+  .headerMobile div:nth-child(2) .menuBtn {
     width: 50px;
     height: auto;
     margin-right: 5px;
@@ -243,35 +249,37 @@ h3 {
     justify-content: center;
   }
 
+  .menu.active {
+    display: flex;
+  }
+
   .menu div h1 {
     margin: 10px 0;
     text-align: center;
   }
 
-  /* Class to show the menu */
-  .menu.active {
-    display: flex;
-  }
-
-  .txtNImgTop {
+  /*text at the top*/
+  .txtTop {
     width: 100%;
     height: auto;
     margin-top: 250px;
     margin-bottom: 170px;
   }
 
-  .txtNImgTop h1 {
+  .txtTop h1 {
     color: #cfff7e;
     font-size: 5rem;
     margin: 0;
     text-align: center;
   }
 
+  /*earth and text*/
   .earthNTxt {
     width: 90%;
     margin-top: 50px;
   }
 
+  /*faqs*/
   .faqs {
     width: 90%;
     margin-top: 50px;
