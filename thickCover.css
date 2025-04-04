@@ -333,3 +333,19 @@ h3 {
     width: 90%;
   }
 }
+
+/*media query for ipads portrait*/
+@media (min-width: 451px) and (max-width: 834px){
+  body {
+    height: fit-content;
+  }
+
+/*thich cover container*/
+.thicCover {
+  gap: 50px;
+}
+
+.thicCover div:nth-child(1) img {
+  width: 360px;
+}
+}

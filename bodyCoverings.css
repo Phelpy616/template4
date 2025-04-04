@@ -394,3 +394,25 @@ h3 {
     width: 90%;
   }
 }
+
+/*media query for ipads portrait*/
+@media (min-width: 451px) and (max-width: 834px){
+/*body coverings text at the top*/
+.coveringsText h1 {
+  font-size: 3rem;
+}
+
+.coveringsText div:nth-child(1){
+  height: fit-content;
+  align-self: flex-end;
+}
+
+.coveringsText div:last-child {
+  margin-bottom: 0;
+}
+
+/*products*/
+.product-item img {
+  width: 200px;
+}
+}

@@ -324,3 +324,12 @@ h3 {
     width: 90%;
   }
 }
+
+/*media query for ipads portrait*/
+@media (min-width: 451px) and (max-width: 834px){
+/*final*/
+.final p {
+  width: 60%;
+}
+}
+  

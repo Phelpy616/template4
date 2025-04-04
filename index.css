@@ -379,3 +379,11 @@ h3 {
     width: 90%;
   }
 }
+
+/*media query for ipads portrait*/
+@media (min-width: 451px) and (max-width: 834px){
+  /*faqs questions*/
+.faqsQuestions h4 {
+  font-size: 0.8rem;
+}
+}
