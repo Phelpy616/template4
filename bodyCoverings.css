@@ -415,4 +415,23 @@ h3 {
 .product-item img {
   width: 200px;
 }
+
+/*final*/
+.final {
+  margin: 70px 0 20px 0;
 }
+}
+
+/*media query for ipads landscape*/
+@media (min-width: 1024px) and (max-width: 1366px){
+  /*body coverings text at the top*/
+.coveringsText {
+  margin-top: 300px;
+}
+
+/*final*/
+.final {
+  margin: 70px 0 20px 0;
+}
+}
+

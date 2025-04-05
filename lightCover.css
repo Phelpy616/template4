@@ -349,3 +349,19 @@ h3 {
   width: 360px;
 }
 }
+
+/*ipad pro 13 portrait*/
+@media (device-width: 1024px) and (device-height: 1366px){
+  body {
+    height: auto;
+    margin: 0;
+    background-color: #091e34;
+  }
+}
+
+/*ipad pro 13 landscape*/
+@media (device-width: 1366px) and (device-height: 1024px){
+  body{
+    height: fit-content;
+  }
+}

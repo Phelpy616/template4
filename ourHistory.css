@@ -331,3 +331,35 @@ h3 {
   width: 90%;
 }
 }
+
+/*media query for ipads landscape*/
+@media (min-width: 1024px) and (max-width: 1366px){
+/*Our history cantainer*/
+.ourHistory {
+  gap: 50px;
+}
+
+.ourHistory div:nth-child(1) {
+  justify-content: flex-start;
+}
+
+.ourHistory div:nth-child(1) h1 {
+  font-size: 5rem;
+}
+}
+
+/*ipad pro 13 portrait*/
+@media (device-width: 1024px) and (device-height: 1366px){
+  body {
+    height: 100vh;
+    margin: 0;
+    background-color: #091e34;
+  }
+
+  /*slider*/
+.slider {
+  margin-top: 190px;
+}
+
+}
+
